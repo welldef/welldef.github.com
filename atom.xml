@@ -4,22 +4,22 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>World Hello</title>
- <link href="http://www.worldhello.net/atom.xml" rel="self"/>
- <link href="http://www.worldhello.net/"/>
+ <title>Simple Records</title>
+ <link href="http://welldef.github.com/atom.xml" rel="self"/>
+ <link href="http://welldef.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.worldhello.net/</id>
+ <id>http://welldef.github.com</id>
  <author>
-   <name>Jiang Xin</name>
-   <email>worldhello.net@gmail.com</email>
+   <name>welldef</name>
+   <email>welldef@126.com</email>
  </author>
  
  {% for post in site.posts limit:15 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://www.worldhello.net{{ post.url }}"/>
+   <link href="http://welldef.github.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.worldhello.net{{ post.id }}</id>
+   <id>http://welldef.github.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
